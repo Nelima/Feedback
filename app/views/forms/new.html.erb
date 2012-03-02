@@ -1,0 +1,38 @@
+<h1> Add a new Feedback</h1>
+<%= form_for @form do |f|%>
+<% if @form.errors.any?%>
+<h2>:Errors</h2>
+    <ul>
+	<%@form.errors.full_messages.each do |message|%>
+	<li><%= message%></li>
+	<%end%>
+	</ul>
+<%end%>
+	<p>
+		<%= f.label :Email%><br/>
+		<%= f.text_field :user_email%>
+	</p>
+	<p>
+		<%= f.label :Firstname%><br/>
+		<%= f.text_field :user_name%>
+	</p>
+	<p>
+		<%= f.label :Feedback_Person_Email%><br/>
+		<%= f.text_field :to_email%>
+	</p>
+	<p>
+		<%= f.label :Fromdate%><br/>
+		<%= f.text_field :from_date%>
+	</p>
+	<p>
+		<%= f.label :Todate%><br/>
+		<%= f.text_field :to_date%>
+	</p>
+	<p>
+		<%= f.label :Content%><br/>
+		<%= f.text_area :content%>
+	</p>
+	<p>
+		<%= f.submit 'Add a new feedback'%>
+	</p>
+<%end%>

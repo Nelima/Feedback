@@ -1,0 +1,10 @@
+<h1>List of feedbacks</h1>
+<p><%= link_to "Add a new Feedback", new_form_path%></p>
+<%@forms.each do |form|%>
+	<p><%= form.user_email%></p>
+	<p><%= form.user_name%></p>
+	<p><%= form.to_email%></p>
+	<p><%= form.from_date%></p>
+	<p><%= form.to_date%></p>
+	<p><%= form.content%></p>
+<%end%>

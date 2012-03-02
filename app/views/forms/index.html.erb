@@ -1,0 +1,11 @@
+<h1>Welcome to Feedback Page</h1>
+<p><%= link_to "Add a new Feedback", new_form_path%></p>
+<hr/>
+<%@forms.each do |form|%>
+	<p> User Mail:<%= link_to form.user_email,form%></p>
+	<p>User Name:<%= form.user_name%></p>
+	<p>Giving feedback of:<%= form.to_email%></p>
+	<p>Start date:<%= form.from_date%></p>
+	<p> End date:<%= form.to_date%></p>
+	<p>Content:<%= form.content%></p><hr/>
+<%end%>
