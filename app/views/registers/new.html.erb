@@ -1,0 +1,22 @@
+<h1>Registration form</h1>
+<%= form_for @register do |r|%>
+<p>
+	<%= r.label :Firstname%><br/>
+	<%= r.text_field :firstname%>
+</p>
+<p>
+	<%= r.label :Lastname%><br/>
+	<%= r.text_field :lastname%>
+</p>
+<p>
+	<%= r.label :Email%><br/>
+	<%= r.text_field :email%>
+</p>
+<p>
+	<%= r.label :Password%><br/>
+	<%= r.text_field :password%>
+</p>
+<p>
+	<%= r.submit 'Register'%>
+</p>
+<%end%>

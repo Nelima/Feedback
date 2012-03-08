@@ -1,5 +1,11 @@
 Feedback::Application.routes.draw do
-  resources :forms
+  #match "forms/register" => 'registers#register'
+  resources :registers
+    resources :forms
+  
+
+  #match "/register" => redirect("/register")
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
