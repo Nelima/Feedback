@@ -13,10 +13,14 @@ class RegistersController < ApplicationController
   def create
     @register = Register.new(params[:register])
     if @register.save
-      redirect_to register_path, :notice => "you are registered"
+      redirect_to registers_path, :notice => "you are registered"
     else
       render "new"
     end
+  end
+  def login
+    
+    p "bye................"
   end
   
 end

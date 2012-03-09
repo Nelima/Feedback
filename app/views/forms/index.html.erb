@@ -1,6 +1,7 @@
 <h1>Welcome to Feedback Page</h1>
 <p><%= link_to "Add a new Feedback", new_form_path%></p>
 <p><%= link_to "Register", :controller => "registers",:action => "new"%>
+	<p><%= link_to "Login", :controller => "registers",:action => "login"%>
 <hr/>
 <%@forms.each do |form|%>
 	<p> User Mail:<%= link_to form.user_email,form%></p>

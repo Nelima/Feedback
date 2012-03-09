@@ -1,0 +1,8 @@
+<h1>Login Form</h1>
+<%= form_tag :action =>'login' do %>
+  <%= label_tag(:firstname, "Firstname:") %>
+  <%= text_field_tag :firstname,  @firstname %><br/>
+  <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag :email,  @email  %><br/>
+<%= submit_tag 'Login'%>
+<% end %>

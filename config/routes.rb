@@ -1,7 +1,9 @@
 Feedback::Application.routes.draw do
   #match "forms/register" => 'registers#register'
+  match "forms/register" => 'registers#login'
   resources :registers
     resources :forms
+    match "forms/register" => 'registers#login'
   
 
   #match "/register" => redirect("/register")

@@ -1,5 +1,13 @@
 <h1>Registration form</h1>
 <%= form_for @register do |r|%>
+<% if @register.errors.any?%>
+<h2>:Errors</h2>
+    <ul>
+	<%@register.errors.full_messages.each do |message|%>
+	<li><%= message%></li>
+	<%end%>
+	</ul>
+<%end%>
 <p>
 	<%= r.label :Firstname%><br/>
 	<%= r.text_field :firstname%>
